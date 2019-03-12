@@ -14,4 +14,8 @@
     <string name="reset_password">Reset Password</string>
     <string name="token">Token</string>
     <string name="new_password">New Password</string>
+    <string name="connect">Connect</string>
+    <string name="wifi_password">Password</string>
+    <string name="scan_wifi">Scan WiFi</string>
+    <string name="connect_to_network_device">Connect to Network Device</string>
 </resources>

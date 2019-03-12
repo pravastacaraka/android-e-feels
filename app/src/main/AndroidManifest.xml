@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.e_feels.e_feelsmanager">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,7 +21,6 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.SplashScreen">
-            <!--android:launchMode="singleTask" >-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,18 +28,23 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.LoginRegister"
-            android:launchMode="singleTask" >
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.LoginRegister">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http"
-                    android:host="10.0.2.2" />
+                <data
+                    android:host="10.0.2.2"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
         <activity
+            android:name=".WifiListActivity"
+            android:theme="@style/AppTheme.WifiList" >
+        </activity>
+        <activity
             android:name=".ProfileActivity"
-            android:theme="@style/AppTheme.Profile"/>
+            android:theme="@style/AppTheme.Profile" />
     </application>
 
 </manifest>
